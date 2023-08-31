@@ -1,85 +1,86 @@
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.Register{
     background-image: url("https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2022/11/netflix-india.jpeg?ssl=1");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  
-  .form-box {
-    background-color: #090b13;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    width: 400px;
-    max-width: 90%;
-  }
-  
-  .button-box {
+    height: 100vh;
+    position: relative;
+    top:0;
+
+    filter: brightness(100%);
+    
+}
+form{
+    z-index: 14;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    margin:auto auto;
+    margin-top:80px;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius:20px;
+    border: 3px solid white;
+
+
+}
+form h1{
+color: white;
+margin-top: 20px;
+text-align: center;
+margin-bottom: 20px;
+padding: 0 8px;
+}
+.ctn{
+    color: white;
+    margin:10px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  
-  .toggle-btn {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .active-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  
-  
-  .input-group {
-    margin-top: 20px;
-  }
-  
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  
-  .check-box {
+    flex-direction: column;
+    
+    
+}
+
+.ctn input{
+        background-color:rgb(46, 44, 44) ;
+        border: 1px solid white;
+        width:80%;
+        color: white;
+        margin: 15px 8px;
+        padding: 2px 8px;
+        margin: auto;
+
+}
+.regbtn{
+text-decoration: none;
+color: white;
+padding: 4px 8px;
+
+
+}
+.regbtn:hover{
+    background-color: red;
+    border-radius: 3px;
+    
+}
+.sign-button{
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .check-box input[type='checkbox'] {
-    margin-right: 10px;
-  }
-  
-  .submit-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  /* Media Query for Responsive Design */
-  @media screen and (max-width: 600px) {
-    .form-box {
-      width: 100%;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    form{
+        width: 60%;
+        margin: 0 auto;
+
     }
-  }
+}
+@media screen and (max-width: 600px){
+    form{
+        width: 80%;
+        margin: 0 auto;
+       
+        
+    }
+}

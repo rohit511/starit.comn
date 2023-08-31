@@ -8,9 +8,14 @@
     border-radius: 15px;
     font-size: 22px;
     color: white;
+
+}
+.search-color{
+    background-color:black;
 }
 .search-begin{
     overflow: hidden;
+    background-color: black;
 }
 .Search-content{
     display: flex;

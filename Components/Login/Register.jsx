@@ -1,119 +1,80 @@
-import "./Register.css"
-import  { useState } from 'react';
+import "./Register.css";
+
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-
 const Register = () => {
-  const [isLoginMode, setIsLoginMode] = useState(true);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
   const navigate = useNavigate();
 
-  const handleToggleMode = () => {
-    setIsLoginMode((prevMode) => !prevMode);
-    resetForm();
+  const handleInputChange = (event) => {
+    setInput((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
-
-  const resetForm = () => {
-    setName("");
-    setEmail("");
-    setPassword("");
-  };
-
-  const handleFormSubmit = (event) => {
+  // code for local storage
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    if (isLoginMode) {
-      // Handle login
-      const storedEmail = localStorage.getItem("emailData");
-      const storedPassword = localStorage.getItem("passwordData");
-      if (email === storedEmail && password === storedPassword) {
-        Swal.fire({
-          title: "Success",
-          text: "Alert successful",
-          icon: "success",
-          confirmButtonText: "OK",
-        });
-        navigate("/");
-      } else {
-        alert("Invalid email or password. Please try again.😣");
-      }
-    } else {
-      // Handle sign-up
-      if (name && email && password) {
-        localStorage.setItem("nameData", name);
-        localStorage.setItem("emailData", email);
-        localStorage.setItem("passwordData", password);
-
-        alert("Account Created Successfully!😎");
-        resetForm();
-        setIsLoginMode(true);
-      } else {
-        alert("Please fill in all fields.😣");
-      }
-    }
+    localStorage.setItem("user", JSON.stringify(input));
+    navigate("/login");
   };
+
   return (
-    <div>
-      <div className='hero'>
-        <div className='form-box'>
-          <div className='button-box'>
-            <div id='btn' />
-            <button type='button' className={isLoginMode ? 'active-btn' : 'toggle-btn'} onClick={handleToggleMode}>
-              Log In
-            </button>
-            <button type='button' className={!isLoginMode ? 'active-btn' : 'toggle-btn'} onClick={handleToggleMode}>
-              Sign Up
-            </button>
-          </div>
-          <div className='social-icons'>
-            {/* Add social icons if needed */}
-          </div>
-
-          <form className='input-group' onSubmit={handleFormSubmit}>
-            {!isLoginMode && (
-              <input
-                type='text'
-                className='input-field'
-                placeholder='Name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            )}
-            <input
-              type='email'
-              className='input-field'
-              placeholder='Email Id'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type='password'
-              className='input-field'
-              placeholder='Enter Password'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            {!isLoginMode && (
-              <div className='check-box'>
-                <input type='checkbox' />
-                <span>I agree to the terms & conditions</span>
-              </div>
-            )}
-            <button type='submit' className='submit-btn'>
-              {isLoginMode ? 'Log In' : 'Sign Up'}
-            </button>
-          </form>
+    <div className="Register">
+      <form onSubmit={handleSubmit} className="box">
+        <h1>Create An Account</h1>
+        <div className="ctn ">
+          <input
+            type="text"
+            name="name"
+            value={input.name}
+            onChange={handleInputChange}
+            id="name"
+            placeholder="name"
+          />
         </div>
-      </div>
+        <div className="ctn">
+          <input
+            type="email"
+            name="email"
+            value={input.email}
+            onChange={handleInputChange}
+            id="email"
+            placeholder="email"
+          />
+        </div>
+        <div className="ctn">
+          <input
+            type="password"
+            name="password"
+            value={input.password}
+            onChange={handleInputChange}
+            className="pass"
+            id="password"
+            placeholder="password"
+          />
+        </div>
+        <div className="sign-button">
+          <NavLink className="regbtn" onClick={handleSubmit}>
+            {" "}
+            Register
+          </NavLink>
+          <div className="t">
+            <NavLink
+              className="regbtn"
+              to="/login"
+              style={{ textDecoration: "none" }}
+            >
+              {" "}
+              Signin
+            </NavLink>
+          </div>
+        </div>
+      </form>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
