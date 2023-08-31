@@ -1,0 +1,32 @@
+.footer-content{
+
+    color: white;
+    text-align: center;
+    z-index: 6;
+
+}
+.footer{
+    height: 30vh;
+        z-index: 6;
+            margin-top: 150px;
+
+
+}
+.playstore-footer{
+    height: 100px;
+    width: 120px;
+    margin:auto;
+    
+}
+
+.footer-content h3{
+    color: #fff;
+}
+
+.playstore-footer img{
+    filter:brightness(100%);
+}
+
+.playstore-footer span{
+    color: #fff;
+}

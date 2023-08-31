@@ -1,0 +1,25 @@
+ .ti{
+    width: 150px;
+    height: auto;
+
+}
+.carousel-item img{
+    width: 30px;
+}
+
+.tix{
+    /* height: 50px;
+    width: 50px;
+    border-radius: 50%; */
+    background:#fff;
+    position: fixed;
+    top:700px;
+    right:80px;
+
+    z-index: 3;
+
+}.move-down{
+    background:transparent;
+    width:40px;
+    height: 40px;
+}

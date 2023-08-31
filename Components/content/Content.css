@@ -1,0 +1,35 @@
+.content{
+   
+    z-index: 5;
+    color: white;
+    overflow: hidden;
+
+}
+.content img{
+    height:80vh;
+    width: 50%;
+}
+video{
+    height:auto;
+    width:100%;
+}
+.video-back{
+    width: 20px;
+    height:30px;
+    background-color: transparent;
+    color: white;
+    position:fixed;
+    top: 20px;z-index: 7;
+
+    left: 10px;
+}
+.content-item{
+    margin-top:10px;
+    display: flex;
+    gap: 4px;
+
+}
+.content-item strong{
+    color:red;
+    margin: 0 10px;
+}
