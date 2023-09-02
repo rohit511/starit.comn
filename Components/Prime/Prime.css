@@ -8,8 +8,8 @@
 }
 .prime-head{
     font-size: 30px;
-    color:rgb(246, 246, 47);
-    margin-top: 20px;
+    color:#ffcc75;;
+    margin-top: 30px;
     text-align: center;
 }
 .card{
@@ -17,18 +17,41 @@
     width:250px;
     border: 3.4px solid white;
     color: white;
+    overflow: hidden;
     
+}
+.card-text{
+    color: aliceblue
+}
+.tick{
+    color:#ffcc75;
+}
+.prime-b{
+    margin-top:8px;
 }
 .card img{
     height:50%;
     border-bottom: 3.2px solid white;
     filter: brightness(100%);
+    transition: .2s ease-in;
+}
+.card img:hover{
+    transform:scale(1.05);
+    height: 50%;
+}
+.cross{
+    color:red;
 }
 @media screen and (max-width:800px){
     .card-text{
         display: block;
+
+    }
+    .prime-head{
+        font-size: 22px;
     }
 }
+
 @media screen and (max-width:300px){
     .card{
         width:80%;

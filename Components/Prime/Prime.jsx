@@ -1,6 +1,10 @@
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import "./Prime.css"
+import { RxCross1 } from "react-icons/rx";
+import { AiOutlineCheck } from "react-icons/ai";
+
+
 const Prime = () => {
   return (
     <div>
@@ -16,13 +20,21 @@ const Prime = () => {
           />
 
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
+            <h5 className="card-title">Mobile View</h5>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> All movies & Tv
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> 2 device allowed
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> With Adds
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> Max Quality 720p
+            </div>
+            <a href="#" className="btn btn-primary prime-b">
+              ₹ 999 / year
             </a>
           </div>
         </div>
@@ -34,13 +46,21 @@ const Prime = () => {
           />
 
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
+            <h5 className="card-title">Laptop View</h5>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> All movies & Tv
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> 4 device allowed
+            </div>
+            <div className="card-text">
+              <RxCross1 className="cross" /> With Adds
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> Max Quality 1080p
+            </div>
+            <a href="#" className="btn btn-primary prime-b" >
+              ₹ 2999 / year
             </a>
           </div>
         </div>
@@ -52,13 +72,23 @@ const Prime = () => {
           />
 
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
+            <h5 className="card-title">Big Screen View</h5>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> All movies & Tv
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> 6 device allowed
+            </div>
+            <div className="card-text">
+              <RxCross1 className="cross" /> With Adds
+            </div>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> Max Quality 1080p
+            </div>
+            <a href="#" className="btn btn-primary prime-b" onClick={()=>{
+              
+            }}>
+              ₹ 4999 / year
             </a>
           </div>
         </div>
