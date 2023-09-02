@@ -11,8 +11,6 @@ import Footer from '../Components/Footer/Footer';
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
  
- 
- 
   return (
     <div className="x">
       <Navbar />

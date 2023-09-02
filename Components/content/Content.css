@@ -10,7 +10,7 @@
     width: 50%;
 }
 video{
-    height:auto;
+    height:90vh;
     width:100%;
 }
 .video-back{
@@ -32,4 +32,18 @@ video{
 .content-item strong{
     color:red;
     margin: 0 10px;
+}
+
+@media screen and (max-width:700px){
+    video{
+        height:50vh;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    video{
+        height:40vh;
+    }
+
 }

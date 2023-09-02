@@ -25,9 +25,22 @@ const Navbar = () => {
         >
           Home
         </li>
-        <li className="nav-links">Movies</li>
-        <li className="nav-links"
-        onClick={()=>{navigate("/register");}}>Login</li>
+        <li
+          className="nav-links"
+          onClick={() => {
+            navigate("/prime");
+          }}
+        >
+          Subscribe
+        </li>
+        <li
+          className="nav-links"
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          Login
+        </li>
 
         <li
           className="nav-links sera"

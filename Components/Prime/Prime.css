@@ -1,0 +1,37 @@
+.prime{
+    margin-top:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    flex-wrap: wrap;
+}
+.prime-head{
+    font-size: 30px;
+    color:rgb(246, 246, 47);
+    margin-top: 20px;
+    text-align: center;
+}
+.card{
+    height:430px;
+    width:250px;
+    border: 3.4px solid white;
+    color: white;
+    
+}
+.card img{
+    height:50%;
+    border-bottom: 3.2px solid white;
+    filter: brightness(100%);
+}
+@media screen and (max-width:800px){
+    .card-text{
+        display: block;
+    }
+}
+@media screen and (max-width:300px){
+    .card{
+        width:80%;
+        margin: auto;
+    }
+}
