@@ -8,7 +8,7 @@ import Register from "../Components/Login/Register";
 import Login from "../Components/Login/Login";
 import Prime from "../Components/Prime/Prime";
 import Watchlist from "../Components/Watchlist/Watchlist";
-
+import Profile from "../Components/Profile/Profile";
 function App() {
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/prime" element={<Prime />}></Route>
           <Route path="/watchlist" element={<Watchlist />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
         </Routes>
       </BrowserRouter>
     </>

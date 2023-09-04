@@ -47,7 +47,9 @@ const Navbar = () => {
           Login
         </li>
         <li className="nav-links sera">
-          <Link to="/watchlist" className="watchi">Watchlist</Link>
+          <Link to="/watchlist" className="watchi">
+            Watchlist
+          </Link>
         </li>
         <li
           className="nav-links sera"
@@ -58,7 +60,12 @@ const Navbar = () => {
           Search
         </li>
 
-        <li className="nav-links">
+        <li
+          className="nav-links"
+          onClick={() => {
+            navigate("/profile");
+          }}
+        >
           <MdPersonPin className="nav-te" />
         </li>
       </ul>
