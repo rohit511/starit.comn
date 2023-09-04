@@ -26,11 +26,37 @@ border-radius:4px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin:60px 8px;
+    margin:80px 8px;
 
 }
 
 .up-thebox{
     padding:0 auto;
     margin-top: 8px;
+}
+.watch-head{
+    text-align:center;
+    padding:10px 0;
+    color: white;
+    font-size: 20px;
+}
+.empty img{
+    height:200px;
+    width: 300px;
+    margin:auto;
+    filter: brightness(100%);
+
+}
+@media screen and (max-width:400px){
+    .watch-head{
+        font-size: 13px;
+        text-align:center;
+    }
+    .empty img{
+        overflow: hidden;
+    height:200px;
+    width: 80%;
+    margin:auto;
+
+}
 }
