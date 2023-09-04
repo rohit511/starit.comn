@@ -2,7 +2,7 @@ import  { useState } from "react";
 import "./Navbar.css";
 import{FaBars} from "react-icons/fa"
 import { MdPersonPin } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState(false);
  const navigate = useNavigate();
@@ -12,7 +12,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <img src="./disney.png" />
+      <img
+        src="./disney.png"
+        onClick={() => {
+          navigate("/");
+        }}
+      />
       <div className="menu-icon" onClick={handleClick}>
         <FaBars className={active ? "fas fa-times" : "fas fa-bars"} />
       </div>
@@ -41,7 +46,9 @@ const Navbar = () => {
         >
           Login
         </li>
-
+        <li className="nav-links sera">
+          <Link to="/watchlist" className="watchi">Watchlist</Link>
+        </li>
         <li
           className="nav-links sera"
           onClick={() => {

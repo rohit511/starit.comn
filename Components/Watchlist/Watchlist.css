@@ -1,0 +1,36 @@
+.img-cart{
+height:300px;
+width:200px;
+border: 1px solid white;
+margin:20px 5px;
+cursor: pointer;
+border-radius:4px;
+}
+.img-cart img{
+    height:240px;
+    width: 180px;
+    margin: auto 10px;
+    padding-top: 10px;
+}
+.remove-watch{
+    margin:auto auto;
+    width: 100%;
+    background-color:white;
+    color:black;
+
+}
+
+.cart-align{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:60px 8px;
+
+}
+
+.up-thebox{
+    padding:0 auto;
+    margin-top: 8px;
+}

@@ -22,15 +22,19 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
-  gap: 20px;
+  grid-template-columns: repeat(6, auto);
+  gap: 4px;
   list-style: none;
   text-align: center;
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
 }
-
+.watchi{
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+} 
 .nav-links {
   color: #fff;
   text-decoration: none;

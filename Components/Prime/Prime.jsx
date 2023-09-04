@@ -33,6 +33,9 @@ const Prime = () => {
             <div className="card-text">
               <AiOutlineCheck className="tick" /> Max Quality 720p
             </div>
+            <div className="card-text">
+              <RxCross1 className="cross" /> Laptop & big-screen
+            </div>
             <a href="#" className="btn btn-primary prime-b">
               ₹ 999 / year
             </a>
@@ -59,7 +62,8 @@ const Prime = () => {
             <div className="card-text">
               <AiOutlineCheck className="tick" /> Max Quality 1080p
             </div>
-            <a href="#" className="btn btn-primary prime-b" >
+            <RxCross1 className="cross" /> big-screen
+            <a href="#" className="btn btn-primary prime-b">
               ₹ 2999 / year
             </a>
           </div>
@@ -85,9 +89,10 @@ const Prime = () => {
             <div className="card-text">
               <AiOutlineCheck className="tick" /> Max Quality 1080p
             </div>
-            <a href="#" className="btn btn-primary prime-b" onClick={()=>{
-              
-            }}>
+            <div className="card-text">
+              <AiOutlineCheck className="tick" /> All screen allowed
+            </div>
+            <a href="#" className="btn btn-primary prime-b" onClick={() => {}}>
               ₹ 4999 / year
             </a>
           </div>
