@@ -19,7 +19,7 @@ import Footer from "../Footer/Footer";
   return (
     <>
       <Navbar />
-      <h1 className="watch-head">Watch Your Saved Movies From here</h1>
+      <h1 className="watch-head watch-mi">Watch Your Saved Movies From here</h1>
       <div className="cart-align">
         {state.cart.length === 0 ? (
           <div className="empty">
