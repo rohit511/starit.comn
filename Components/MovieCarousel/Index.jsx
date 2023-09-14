@@ -36,7 +36,7 @@ function Index() {
 
 
   useEffect(() => {
-    const url = `https://academics.newtonschool.co/api/v1/ott/show`;
+    const url = `https://academics.newtonschool.co/api/v1/ott/show?limit=100`;
 
     const fetchData = async () => {
       const headers = {

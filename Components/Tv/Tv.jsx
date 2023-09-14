@@ -34,7 +34,7 @@ function Index() {
   //  const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `https://academics.newtonschool.co/api/v1/ott/show`;
+    const url = `https://academics.newtonschool.co/api/v1/ott/show?limit=100`;
 
     const fetchData = async () => {
       const headers = {
@@ -44,7 +44,7 @@ function Index() {
         const response = await fetch(url, { headers });
         const json = await response.json();
         setWebSeries(json.data);
-        console.log(json.data);
+        console.log(json);
         const filtered = json.data.filter(
           (series) => series.type === "tv show"
         );
@@ -129,7 +129,10 @@ function Index() {
                       xi(series);
                     }}
                   />
+                  
+                  
                 </div>
+                
               </>
             );
           })}
